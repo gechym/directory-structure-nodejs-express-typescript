@@ -29,25 +29,10 @@ app.use(rateLimit({
 app.use(mongoSanitize());
 
 
-
 app.use('/message' , messageRouter);
 
 
-// error handler
-// app.get("/testError", (req: Request, res: Response, next: NextFunction) => {
-//     const number = Math.floor(Math.random() * 10);
-//     if (number > 5) {
-//         throw new ErrorBadRequest("Error test");
-//     }
-//     res.status(200).json({status: 200, message: "OK"});
-// })
-
 app.use(handleError);
-
-const post: number = Number(process.env.POST) || 8080;
-app.listen(post, () => {
-    console.log(`✅ Server running on port ${post}`);
-});
 
 
 const server: http.Server = createServer(app);
