@@ -29,6 +29,9 @@ app.use(rateLimit({
 app.use(mongoSanitize());// Data sanitization against NoSQL query injection
 
 
+
+
+
 // error handler
 app.get("/testError", (req: Request, res: Response, next: NextFunction) => {
     const number = Math.floor(Math.random() * 10);
@@ -37,7 +40,6 @@ app.get("/testError", (req: Request, res: Response, next: NextFunction) => {
     }
     res.status(200).json({status: 200, message: "OK"});
 })
-
 
 
 app.use(handleError);

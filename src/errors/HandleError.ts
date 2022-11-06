@@ -15,7 +15,7 @@ import {CustomError} from "./index";
 
     res.status(err.status || 500).json({
         status: err.status || 500,
-        message: err.message,
+        message: err.message || "Internal Server Error",
         stack: err.stack // only for development
     });
 
