@@ -1,0 +1,106 @@
+[33mcommit 7da16947ad8caf92c87a15a5f5955cd73ebd91a9[m[33m ([m[1;36mHEAD -> [m[1;32mtest[m[33m, [m[1;32mdemo_live_chat[m[33m)[m
+Merge: fcf28ce 30aa875
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Mon Nov 7 00:51:31 2022 +0700
+
+    Merge remote-tracking branch 'origin/demo_live_chat' into demo_live_chat
+    
+    # Conflicts:
+    #       src/app.ts
+
+[33mcommit fcf28ceb6a1bca03081e6efd8261c9e12d5a5339[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Mon Nov 7 00:49:26 2022 +0700
+
+    feat : setup for socket io
+
+[33mcommit 65254e6b131aed195d73c22f8d1dc2b04304a69c[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 23:40:20 2022 +0700
+
+    feat : 🎉 fake livechat
+
+[33mcommit ff212502853c0fa7cceaf92615af2f0282718617[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Mon Nov 7 00:44:40 2022 +0700
+
+    feat : setup for socket io
+
+[33mcommit a79df08629dd3f682375fec973fa4b8525c5e9ff[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 23:42:36 2022 +0700
+
+    feat : config .gitignore
+
+[33mcommit 30aa87569c3d8be88fe5e70abf81a3783ece607e[m[33m ([m[1;31morigin/demo_live_chat[m[33m)[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 23:40:20 2022 +0700
+
+    feat : 🎉 fake livechat
+
+[33mcommit 38c7c48685e586b494754f280e53a372fc5522d9[m
+Merge: 4088ced dad1bb1
+Author: Nguyễn Đức Bảo <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:50:47 2022 +0700
+
+    Merge pull request #3 from gechym/feature/connectDatabase
+    
+    feat : 🎉 create file ConnectDatabase.ts
+
+[33mcommit dad1bb10fb6af34c9d10480799d6f7e446946ee5[m
+Merge: b4cb2c7 2fc9241
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:46:43 2022 +0700
+
+    Merge remote-tracking branch 'origin/feature/connectDatabase' into feature/connectDatabase
+
+[33mcommit b4cb2c7835a4f5897b9c945a8a1a5d22c1c393b1[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:43:17 2022 +0700
+
+    feat : 🎉 create file ConnectDatabase.ts #2
+
+[33mcommit 2fc924111fa1f4e41f63106afcdbf39bec7e25cd[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:43:17 2022 +0700
+
+    feat : 🎉 create file ConnectDatabase.ts
+
+[33mcommit 4088ceda0dc40604c2d429dda9436a64ef722256[m
+Merge: 923fcd5 7dd3f58
+Author: Nguyễn Đức Bảo <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:29:19 2022 +0700
+
+    Merge pull request #1 from gechym/gechym-patch-1
+    
+    Create README.md
+
+[33mcommit 7dd3f585ccec431db3e47bd93ff7eb40ff42e193[m
+Author: Nguyễn Đức Bảo <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 01:26:53 2022 -0800
+
+    Create README.md
+
+[33mcommit 923fcd59262fb682330b9def188babed30f1daaf[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 16:24:39 2022 +0700
+
+    feat : Add router"
+
+[33mcommit 1e82011a6d4357fb9674b7a229d0cb46ad720bed[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sun Nov 6 00:01:21 2022 +0700
+
+    feat : Add custom Error Types and url endpoint "/testError"
+
+[33mcommit 1c3fc75f255482b04cb6ab37ffa1420a11995f81[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sat Nov 5 22:41:10 2022 +0700
+
+    feat : init project
+
+[33mcommit e0a2ff843f36d45d271e5eb7c4e3747392b7a70b[m
+Author: gechym <nguyenducbao166@gmail.com>
+Date:   Sat Nov 5 22:31:10 2022 +0700
+
+    feat : init project

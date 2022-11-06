@@ -1,13 +1,16 @@
-import express, {Request, Response, NextFunction} from 'express';
+import express, {Express} from 'express';
 import dotenv from "dotenv";
 import helmet from "helmet";
 import cors from "cors";
 import morgan from "morgan";
 import rateLimit from 'express-rate-limit';
 import mongoSanitize from 'express-mongo-sanitize';
+import http, {createServer} from "http";
+import handleError from "./errors/HandleError";
+import {messageRouter} from "./routes";
 
 dotenv.config();
-const app = express();
+const app: Express = express();
 
 app.use(helmet());
 app.use(cors());
@@ -17,16 +20,20 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("./public"));
 app.use(rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
-    message: "Too many requests from this IP, please try again after 15 minutes"
+    max: 100,
+    message: {
+        status: 429,
+        message: "Too many requests from this IP, please try again in 15 minutes"
+    }
 }));
-app.use(mongoSanitize());// Data sanitization against NoSQL query injection
+app.use(mongoSanitize());
 
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
-    res.send("Hello World!");
-})
 
-const post = process.env.POST || 8080;
-app.listen(post, () => {
-    console.log(`✅ Server running on port ${post}`);
-});
+app.use('/message' , messageRouter);
+
+
+app.use(handleError);
+
+
+const server: http.Server = createServer(app);
+export default server;
