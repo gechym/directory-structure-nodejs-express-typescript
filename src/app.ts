@@ -44,6 +44,8 @@ app.get("/testError", (req: Request, res: Response, next: NextFunction) => {
 
 app.use(handleError);
 
+
+require('./repository/ConnectDatabase.ts')
 const post: number = Number(process.env.POST) || 8080;
 app.listen(post, () => {
     console.log(`✅ Server running on port ${post}`);
