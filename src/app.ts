@@ -7,17 +7,12 @@ import mongoSanitize from 'express-mongo-sanitize';
 import http, {createServer} from "http";
 import handleError from "./errors/HandleError";
 import fs from 'fs';
-
 dotenv.config();
 const app: Express = express();
 
 
-
-
-
-
 app.use(cors());
-app.use(morgan("common"));
+app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("./src/public"));
@@ -34,35 +29,8 @@ app.use(handleError);
 
 // error handler
 app.get("/play", (req: Request, res: Response, next: NextFunction) => {
-
-    // const videoPath = `${__dirname}/public/videoplayback.mp4`;
-    // const videoSize = fs.statSync(videoPath).size; // 32.5 MB  = 34,135,980 bytes
-
-    // const range  = req.headers.range; //33554432-34135979
-    // console.log("range", range);
-    
-    // const chunkSize = 10 ** 6; // 1MB
-
-    // // pick the number from the range string received from the client
-    // const start = Number((range as string).replace(/\D/g, "")); //bytes=33554432-34135979 => 33554432
-
-    // const end = Math.min(start + chunkSize, videoSize - 1);
-
-    // const contentLength = end - start + 1;
-    // const headers = {
-    //     "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-    //     "Accept-Ranges": "bytes",
-    //     "Content-Length": contentLength,
-    //     "Content-Type": "video/mp4",
-    // };
-    // res.writeHead(206, headers);
-
-    // const videoStream = fs.createReadStream(videoPath, {start, end});
-
-    // videoStream.pipe(res);
-
-
-    const videoPath = `${__dirname}/public/videoplayback.mp4`
+    // @ts-ignore
+    const videoPath = `${__basedir}/public/videoplayback.mp4`
     const videoSize = fs.statSync(videoPath).size
     const range = req.headers.range!!
 
@@ -78,7 +46,6 @@ app.get("/play", (req: Request, res: Response, next: NextFunction) => {
         "Content-Type": "video/mp4",
     };
     res.writeHead(206, headers);
-
     const videoStream = fs.createReadStream(videoPath, {start, end});
 
     videoStream.pipe(res);
